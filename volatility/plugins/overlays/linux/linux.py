@@ -493,6 +493,10 @@ class linux_file(obj.CType):
 
         return ret
 
+    @property
+    def uid(self):
+        return self.f_owner.uid
+
 # FIXME - walking backwards has not been thorougly tested
 class hlist_node(obj.CType):
     """A hlist_node makes a doubly linked list."""
